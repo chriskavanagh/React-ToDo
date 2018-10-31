@@ -30,10 +30,10 @@ class ToDoList extends Component {
             <div className="to-do-list-main">
                 <input
                  onChange={ (e)=>this.changeUserInput(e.target.value) }
-                 value={this.state.userInput}
+                 value={ this.state.userInput }
                  type="text"
                  />
-                <button onClick={()=>this.addToList(this.state.userInput)}>Press Me</button>
+                <button onClick={ ()=>this.addToList(this.state.userInput) }>Press Me</button>
                 <ul>
                     { this.state.list.map(val => <li>{val}</li>) }
                 </ul>
