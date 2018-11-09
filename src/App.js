@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import LotsOfGreetings from './Hello';
 import './App.css';
 import ToDoList from './todolist';
+import Show from './Showme';
+
 
 class App extends Component {
   render() {
@@ -9,6 +11,7 @@ class App extends Component {
       <div className="App">
         <LotsOfGreetings />
         <ToDoList />
+        <Show />
       </div>
     );
   }

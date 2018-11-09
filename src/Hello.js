@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import './Hello.css';
 // import { AppRegistry, Text, View } from 'react-native';
 
 class Greeting extends Component {
     render() {
         return (
-            <div>Hello { this.props.name }!</div>
+            <div className="props-name">Hello { this.props.name }!</div>
         )
     }
 }
@@ -12,7 +13,7 @@ class Greeting extends Component {
 export default class LotsOfGreetings extends Component {
     render() {
         return (
-            <div>
+            <div className="name-container">
                 <Greeting name="Chris" />
                 <Greeting name="Cam" />
                 <Greeting name="Haley" />

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Button } from 'reactstrap';
+import './ToDoList.css';
 
 class ToDoList extends Component {
     constructor(props) {
@@ -28,12 +30,18 @@ class ToDoList extends Component {
     render() {
         return (
             <div className="to-do-list-main">
+                <br/><br/>
                 <input
                  onChange={ (e)=>this.changeUserInput(e.target.value) }
                  value={ this.state.userInput }
                  type="text"
                  />
-                <button onClick={ ()=>this.addToList(this.state.userInput) }>Press Me</button>
+                <Button 
+                    outline color="primary" 
+                    onClick={ ()=>this.addToList(this.state.userInput) }>
+                    Press Me
+                </Button>
+                <br/>
                 <ul>
                     { this.state.list.map(val => <li>{val}</li>) }
                 </ul>
