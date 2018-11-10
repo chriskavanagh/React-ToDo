@@ -12,11 +12,17 @@ class ToDoList extends Component {
         }
     }
 
-    changeUserInput(input) {
+    /* changeUserInput(input) {
         this.setState({
             userInput: input
         });
-    } // end function
+    } */ // end function
+
+    changeUserInput = (event) => {
+        this.setState({
+            userInput: event.target.value
+        })
+    };
 
     addToList(input) {
         let listArr = this.state.list;
@@ -32,7 +38,7 @@ class ToDoList extends Component {
             <div className="to-do-list-main">
                 <br/><br/>
                 <input
-                 onChange={ (e)=>this.changeUserInput(e.target.value) }
+                 onChange={ this.changeUserInput }
                  value={ this.state.userInput }
                  type="text"
                  />
